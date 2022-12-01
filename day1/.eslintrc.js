@@ -25,11 +25,8 @@ module.exports = {
     "no-console": 0,
     "vue/attribute-hyphenation": 0,
     "vue/html-self-closing": 0,
-    "vue/singleline-html-element-content-newline": [
-      2,
-      {
-        ignores: ["h1"]
-      }
-    ]
+    "vue/singleline-html-element-content-newline": [2, {
+      ignores: ["h1"]
+    }]
   }
 };
