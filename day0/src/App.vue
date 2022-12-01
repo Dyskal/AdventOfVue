@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-full flex flex-col justify-center items-center text-center">
-    <table class="w-80 h-80 table-fixed border-collapse text-4xl">
+  <div class="flex h-full w-full flex-col items-center justify-center text-center">
+    <table class="h-80 w-80 table-fixed border-collapse text-4xl">
       <tr
         v-for="(_, row) in 3"
         :key="row"
@@ -18,25 +18,25 @@
 
     <p
       v-if="game"
-      class="text-2xl my-5"
+      class="my-5 text-2xl"
     >
       {{ `It's ${player.description}'s turn.` }}
     </p>
     <p
       v-else-if="game === undefined"
-      class="text-2xl my-5"
+      class="my-5 text-2xl"
     >
       It's a draw!
     </p>
     <p
       v-else
-      class="text-2xl my-5"
+      class="my-5 text-2xl"
     >
       {{ `${player.description} has won!` }}
     </p>
     <button
       :style="{visibility: game ? 'hidden' : 'visible'}"
-      class="px-3 py-2 bg-green rounded-lg text-xl focus:outline-none"
+      class="rounded-lg bg-green px-3 py-2 text-xl focus:outline-none"
       @click="playagain"
     >
       Play again
